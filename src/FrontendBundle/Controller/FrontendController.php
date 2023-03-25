@@ -11,4 +11,5 @@ class FrontendController extends AbstractController
     {
         return $this->render('@AppFrontend/index.html.twig');
     }
+    
 }
