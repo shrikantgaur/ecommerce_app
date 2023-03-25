@@ -6,5 +6,3 @@
 
 #PHP Version
 - 7.4.33
-#Bootstrap Version 
-- v5.0.2
