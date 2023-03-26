@@ -10,6 +10,6 @@ class FrontendController extends AbstractController
     public function index(): Response
     {
         return $this->render('@AppFrontend/index.html.twig');
-    }
+    }  
     
 }

@@ -1,0 +1,41 @@
+{% extends '@AppFrontend/base.html.twig' %}
+{% block content %}
+<section class="single-product">
+    <div class="container my-5">
+    <div class="row">
+        <div class="col-lg-6">
+        <img src="{{ product.image }}" alt="{{ product.name }}" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+        <h1>{{ product.name }}</h1>
+        <hr>
+        <p>{{ product.description }}</p>
+        <h2 class="text-primary">${{ product.price }}</h2>
+        <form action="{{ path('cart_add', {'id': product.id}) }}" method="POST">
+            <div class="input-group mb-3">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="decrementQuantity()">-</button>
+            <input type="number" name="quantity" value="1" min="1" max="10" class="form-control form-control-sm" id="quantity-input">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="incrementQuantity()">+</button>
+            </div>
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
+        </div>
+    </div>
+    </div>
+</section>
+<script>
+function decrementQuantity() {
+  let quantityInput = document.getElementById("quantity-input");
+  if (quantityInput.value > 1) {
+    quantityInput.value = parseInt(quantityInput.value) - 1;
+  }
+}
+
+function incrementQuantity() {
+  let quantityInput = document.getElementById("quantity-input");
+  if (quantityInput.value < 10) {
+    quantityInput.value = parseInt(quantityInput.value) + 1;
+  }
+}
+</script>
+{% endblock %}
