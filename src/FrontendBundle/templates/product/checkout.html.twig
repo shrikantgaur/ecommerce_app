@@ -1,0 +1,33 @@
+{% extends '@AppFrontend/base.html.twig' %}
+
+{% block content %}
+<section class="checkout-section">
+    <div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8">
+        <h1>Checkout</h1>
+        <hr>
+
+        <form action="{{ path('checkout_confirm') }}" method="POST">
+            <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <textarea name="address" class="form-control" rows="3" required></textarea>
+            </div>
+            <div class="text-end">
+            <p class="lead">Total: ${{ cart.total }}</p>
+            <button type="submit" class="btn btn-primary">Place Order</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock %}

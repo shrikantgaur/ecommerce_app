@@ -1,6 +1,30 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
-app_frontend:
+root_path:
     path: /
     controller: App\FrontendBundle\Controller\FrontendController::index
+
+product_shop:
+    path: /shop
+    controller: App\FrontendBundle\Controller\ProductController::shop
+
+product_single:
+    path: /product/{id}
+    controller: App\FrontendBundle\Controller\ProductController::show
+
+product_cart:
+    path: /cart
+    controller: App\FrontendBundle\Controller\ProductController::cart
+
+product_checkout:
+    path: /checkout
+    controller: App\FrontendBundle\Controller\ProductController::checkout
+
+checkout_confirm:
+    path: /checkout_confirm
+    controller: App\FrontendBundle\Controller\ProductController::checkout_confirm
+
+cart_add:
+    path: /cart_add
+    controller: App\FrontendBundle\Controller\ProductController::cart_add

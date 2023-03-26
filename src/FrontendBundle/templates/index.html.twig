@@ -1,7 +1,7 @@
 {% extends '@AppFrontend/base.html.twig' %}
 
-{% block body %}
-    {% include '@AppFrontend/navigation.html.twig' %}
-    {% include '@AppFrontend/content.html.twig' %}
-    {% include '@AppFrontend/footer.html.twig' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    {% include '@AppFrontend/pages/home.html.twig' %}
 {% endblock %}

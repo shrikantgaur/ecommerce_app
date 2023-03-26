@@ -1,0 +1,56 @@
+{% extends '@AppFrontend/base.html.twig' %}
+
+{% block content %}
+<!-- Shop page content -->
+<div class="container">
+  <div class="row">
+    <!-- Product filters -->
+    <div class="col-md-3">
+      <h4>Filter by:</h4>
+      <form>
+        <div class="form-group">
+          <label for="category-select">Category:</label>
+          <select class="form-control" id="category-select">
+            <option value="">All</option>
+            <option value="category1">Category 1</option>
+            <option value="category2">Category 2</option>
+            <option value="category3">Category 3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="price-range">Price range:</label>
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control" id="price-range" placeholder="Min" aria-label="Minimum price">
+            <span class="input-group-addon">-</span>
+            <input type="text" class="form-control" id="price-range" placeholder="Max" aria-label="Maximum price">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Apply filters</button>
+      </form>
+    </div>
+    <!-- Product list -->
+    <div class="col-md-9">
+      <div class="row">
+        <!-- Product item -->
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img class="card-img-top" src="product-image.jpg" alt="Product image">
+            <div class="card-body">
+              <h5 class="card-title">Product name</h5>
+              <p class="card-text">Product description</p>
+              <p class="card-text">$99.99</p>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- /Product item -->
+        <!-- More product items -->
+        <!-- ... -->
+        <!-- /More product items -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Shop page content -->
+{% endblock %}
