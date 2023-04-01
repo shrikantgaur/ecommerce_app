@@ -7,6 +7,8 @@ framework:
         packages:
             your_bundle_name:
                 base_path: '@AppFrontend/public'
+            admin_bundle:
+                base_path: '@AdminBundle/public'
 
     # Enables session support. Note that the session will ONLY be started if you read or write from it.
     # Remove or comment this section to explicitly disable session support.

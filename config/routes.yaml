@@ -28,3 +28,7 @@ checkout_confirm:
 cart_add:
     path: /cart_add
     controller: App\FrontendBundle\Controller\ProductController::cart_add
+
+admin:
+    path: /admin
+    controller: App\AdminBundle\Controller\AdminController::index
